@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/lindentree/Projects/true_neutral/contract/target/debug/build/typenum-2b90a765739544b1/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/lindentree/Projects/true_neutral/contract/target/debug/build/typenum-2b90a765739544b1/out/op.rs
