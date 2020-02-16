@@ -74,7 +74,7 @@ class App extends Component {
         <div className="image-wrapper">
           <img className="logo" src={nearlogo} alt="NEAR logo" />
           <p><span role="img" aria-label="fish">🐟</span> NEAR protocol is a new blockchain focused on developer productivity and useability!<span role="img" aria-label="fish">🐟</span></p>
-          <p><span role="img" aria-label="chain">⛓</span> This little react app is connected to blockchain right now. <span role="img" aria-label="chain">⛓</span></p>
+          <p><span role="img" aria-label="chain">⛓</span> This little React app is connected to blockchain right now. <span role="img" aria-label="chain">⛓</span></p>
           <p style={style}>{this.state.speech}</p>
         </div>
         <div>
@@ -83,7 +83,6 @@ class App extends Component {
         </div>
         <div>
           <div className="logo-wrapper">
-            <img src={near} className="App-logo margin-logo" alt="logo" />
             <img src={logo} className="App-logo" alt="logo" />
           </div>
           
