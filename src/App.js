@@ -1,5 +1,5 @@
 import 'regenerator-runtime/runtime';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,7 +9,14 @@ import {
 import logo from './assets/logo.png';
 import nearlogo from './assets/gray_near_logo.svg';
 import near from './assets/near.svg';
+import Guidelines from './components/Guidelines';
 import './App.css';
+
+const Home = () => (
+  <div>
+    <h2>Home</h2>
+  </div>
+)
 
 class App extends Component {
   constructor(props) {
@@ -76,23 +83,20 @@ class App extends Component {
       textShadow: "1px 1px #D1CCBD"
     }
     return (
+    
       <div className="App-header">
         <div className="landing">
        
 
         <div className="landing-inner">
-            <h1 className="f1 fw6">Fair News Certified</h1>
+            <h1 className="f1 fw6">True Neutral</h1>
                 <p className="f3 fw5">
                     Encouraging Quality News in an Unregulated Market
                 </p>
         </div>
                  
        </div>
-        <div>
-          {this.state.login ? <button onClick={this.requestSignOut}>Log out</button>
-            : <button onClick={this.requestSignIn}>Log in with NEAR</button>}
-        </div>
-
+        
         <div>
           <div className="logo-wrapper">
             <img src={logo} className="App-logo" alt="logo" />
@@ -110,8 +114,14 @@ class App extends Component {
           <p><span role="img" aria-label="chain">⛓</span> This little React app is connected to blockchain right now. <span role="img" aria-label="chain">⛓</span></p>
           <p style={style}>{this.state.speech}</p>
         </div>
-          </div>
-     
+
+        <div>
+          {this.state.login ? <button onClick={this.requestSignOut}>Log out</button>
+            : <button onClick={this.requestSignIn}>Log in with NEAR</button>}
+        </div>
+      </div>
+        
+  
     
     )
   }

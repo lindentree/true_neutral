@@ -2,10 +2,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url("/assets/landing.jpg");
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  color: white;
+  color: #28509A;
   text-align: center;
   padding:2%; 
 }
@@ -16,7 +17,7 @@
 
 .logo-wrapper {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: center;
 }
 
 .margin-logo {
@@ -30,7 +31,6 @@
 html, body {
   overflow-x: hidden; 
 }
-
 
 .green-hover:hover, .color-green {
     color: var(--main-color);
@@ -51,7 +51,6 @@ html, body {
     box-shadow: none;
     border-width: 2px;
 }
-
 
 .landing-inner {
   color: #fff;
@@ -91,7 +90,6 @@ html, body {
     justify-content: center; 
     flex-flow: row wrap;
 }
-
 
 .image-wrapper {
   display: flex;

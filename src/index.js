@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import getConfig from './config.js';
 import * as nearlib from 'nearlib';
+import { BrowserRouter } from 'react-router-dom';
+
 
 // Initializing contract
 async function initContract() {
@@ -31,7 +33,10 @@ async function initContract() {
 }
 
 window.nearInitPromise = initContract().then(() => {
-  ReactDOM.render(<App contract={window.contract} wallet={window.walletAccount} />,
+  ReactDOM.render(
+  <BrowserRouter>
+    <App contract={window.contract} wallet={window.walletAccount} /> 
+    </BrowserRouter>,
     document.getElementById('root')
   );
 }).catch(console.error)
