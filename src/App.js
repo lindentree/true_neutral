@@ -1,6 +1,6 @@
 import 'regenerator-runtime/runtime';
 import React, { Component } from 'react';
-import logo from './assets/logo.svg';
+import logo from './assets/logo.png';
 import nearlogo from './assets/gray_near_logo.svg';
 import near from './assets/near.svg';
 import './App.css';

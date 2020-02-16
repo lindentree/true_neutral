@@ -2,7 +2,7 @@
   "name": "true_neutral",
   "version": "0.0.1",
   "scripts": {
-    "build": "npm run build:contract && npm run build:web",
+    "build": "yarn run build:contract && yarn run build:web",
     "build:contract": "cd contract && ./build.sh",
     "build:web": "parcel build src/index.html --public-url ./",
     "dev:deploy:contract": "near dev-deploy --wasmFile ./contract/res/status_message.wasm",
@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "nearlib": "^0.21.0",
-    "react": "^16.12.0",
+    "parcel": "^1.12.4",
+    "react": "^16.0.0",
     "react-dom": "^16.12.0",
     "regenerator-runtime": "^0.13.3"
   }
