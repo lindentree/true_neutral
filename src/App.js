@@ -1,9 +1,22 @@
 import 'regenerator-runtime/runtime';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import logo from './assets/logo.png';
 import nearlogo from './assets/gray_near_logo.svg';
 import near from './assets/near.svg';
+import Guidelines from './components/Guidelines';
 import './App.css';
+
+const Home = () => (
+  <div>
+    <h2>Home</h2>
+  </div>
+)
 
 class App extends Component {
   constructor(props) {
@@ -70,39 +83,46 @@ class App extends Component {
       textShadow: "1px 1px #D1CCBD"
     }
     return (
+    
       <div className="App-header">
-        <div className="image-wrapper">
-          <img className="logo" src={nearlogo} alt="NEAR logo" />
-          <p><span role="img" aria-label="fish">🐟</span> NEAR protocol is a new blockchain focused on developer productivity and useability!<span role="img" aria-label="fish">🐟</span></p>
-          <p><span role="img" aria-label="chain">⛓</span> This little react app is connected to blockchain right now. <span role="img" aria-label="chain">⛓</span></p>
-          <p style={style}>{this.state.speech}</p>
+        <div className="landing">
+       
+
+        <div className="landing-inner">
+            <h1 className="f1 fw6">True Neutral</h1>
+                <p className="f3 fw5">
+                    Encouraging Quality News in an Unregulated Market
+                </p>
         </div>
-        <div>
-          {this.state.login ? <button onClick={this.requestSignOut}>Log out</button>
-            : <button onClick={this.requestSignIn}>Log in with NEAR</button>}
-        </div>
+                 
+       </div>
+        
         <div>
           <div className="logo-wrapper">
-            <img src={near} className="App-logo margin-logo" alt="logo" />
             <img src={logo} className="App-logo" alt="logo" />
           </div>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          
           <p><span role="img" aria-label="net">🕸</span> <a className="App-link" href="https://nearprotocol.com">NEAR Website</a> <span role="img" aria-label="net">🕸</span>
           </p>
           <p><span role="img" aria-label="book">📚</span><a className="App-link" href="https://docs.nearprotocol.com"> Learn from NEAR Documentation</a> <span role="img" aria-label="book">📚</span>
           </p>
         </div>
+
+        <div className="image-wrapper">
+          <img className="logo" src={nearlogo} alt="NEAR logo" />
+          <p><span role="img" aria-label="fish">🐟</span> NEAR protocol is a new blockchain focused on developer productivity and useability!<span role="img" aria-label="fish">🐟</span></p>
+          <p><span role="img" aria-label="chain">⛓</span> This little React app is connected to blockchain right now. <span role="img" aria-label="chain">⛓</span></p>
+          <p style={style}>{this.state.speech}</p>
+        </div>
+
+        <div>
+          {this.state.login ? <button onClick={this.requestSignOut}>Log out</button>
+            : <button onClick={this.requestSignIn}>Log in with NEAR</button>}
+        </div>
       </div>
+        
+  
+    
     )
   }
 
